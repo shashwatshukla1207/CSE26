@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px 20px rgba(0,0,0,0.1);
+      width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgba(19, 20, 19, 0.77);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .checkbox-label {
+      font-weight: normal;
+      color: #444;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form>
+      <label>Email:</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" placeholder="Enter 10-digit number" pattern="[0-9]{10}" required>
+     
+
+      <label>Choose Course:</label>
+      <select name="course" required>
+        <option value="">Select</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="C++">JavaScript</option>
+
+      </select>
+
+      <label class="checkbox-label">
+        <input type="checkbox" name="agree" required> I agree to the terms
+      </label>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
