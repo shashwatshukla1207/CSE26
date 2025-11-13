@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Page - Simple</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.product-card {
+  background-color: white;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.price-row {
+  margin: 15px 0;
+}
+
+.price {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+.add-cart {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-cart:hover {
+  background-color: #2e7d32;
+}
+
+
+  <header class="site-header">
+    <h1>ShopEasy</h1>
+  </header>
+
+  <main class="container">
+    <section class="product-card">
+      <img class="product-image" src="shirt.png" alt="Product">
+
+      <h2 class="product-title">Classic Cotton T-Shirt</h2>
+      <p class="product-desc">
+        Soft, breathable cotton. Regular fit. Available in multiple colors.
+      </p>
+
+      <div class="price-row">
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,199</span>
+      </div>
+
+      <button class="add-cart">Add to Cart</button>
+    </section>
+  </main>
+</body>
+</html>
