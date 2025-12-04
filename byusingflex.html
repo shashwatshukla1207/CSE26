@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block and Inline Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f7ff;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #1e3a8a;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 80px;
+        }
+
+        
+        .block-box {
+            border: 2px solid #7da4ff;
+            padding: 20px;
+            width: 180px;
+            border-radius: 10px;
+        }
+
+        .block-box div {
+            background: #e5edff;
+            border: 2px solid #7da4ff;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-weight: arial;
+        }
+
+       
+        .inline-box {
+            border: 2px solid #f5b74b;
+            padding: 20px;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .inline-box span {
+            display: inline-block;
+            background: #fff7e5;
+            border: 2px solid #f5b74b;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin: 10px;
+            font-weight: arial;
+        }
+
+        
+        .label {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #080808;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Major Versions of HTML</h2>
+
+    <div class="container">
+
+       
+        <div>
+            <div class="block-box">
+                <div>Box 1</div>
+                <div>Box 2</div>
+                <div>Box 3</div>
+                <div>Box 4</div>
+            </div>
+            <div class="label">Block-Level Element</div>
+        </div>
+
+        
+        <div>
+            <div class="inline-box">
+                <span>Box 1</span>
+                <span>Box 2</span>
+                <span>Box 3</span>
+                <span>Box 4</span>
+            </div>
+            <div class="label">Inline Element</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
