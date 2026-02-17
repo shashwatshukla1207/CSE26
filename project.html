@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookVerse | Discover Your Next Read</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(120deg, #fdfbfb, #ebedee);
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    header button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #c33764;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header button:hover {
+      transform: scale(1.05);
+      background: #f1f1f1;
+    }
+
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      width: 0;
+      height: 3px;
+      background: #c33764;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+   
+    .section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 60px auto;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section p {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .book {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      transition: 0.4s;
+    }
+
+    .book:hover {
+      transform: translateY(-10px);
+    }
+
+    .book img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .book-content {
+      padding: 20px;
+    }
+
+    .book-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .book-content span {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .price {
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1d2671;
+    }
+
+    .book-content button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .book-content button:hover {
+      opacity: 0.9;
+      letter-spacing: 1px;
+    }
+
+  
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature h4 {
+      margin-bottom: 10px;
+      color: #c33764;
+    }
+
+
+    footer {
+      background: #1d2671;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BookWallah</h1>
+    <p>Where Stories, Knowledge & Imagination Meet</p>
+    <button>Explore Collection</button>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Best Sellers</a>
+    <a href="#">New Arrivals</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="section">
+    <h2>Handpicked For You</h2>
+    <p>Books that readers love and recommend</p>
+
+    <div class="books">
+      <div class="book">
+        <img src="https://thebookerprizes.com/sites/default/files/styles/2_3_media_x_large/public/2025-07/The%20Loneliness%20of%20Sonia%20and%20Sunny_Book%20Jacket_resized%20for%20web.jpg?itok=G6GPjmP8" alt="Book">
+        <div class="book-content">
+          <h3>The Loneliness of Sonia and Sunny</h3>
+          <span>Kiran Desai</span>
+          <div class="price">₹399</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61go3pwTLYL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Attitude is Everything change it</h3>
+          <span>Jeff Keller</span>
+          <div class="price">₹499</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/715qi-cIbML._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Don't Believe Everything You Think </h3>
+          <span>Joseph Nguyen</span>
+          <div class="price">₹599</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/71XEsXS5RlL._AC_UL480_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Psychology of Money</h3>
+          <span>Morgan Housel</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+        <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61ZmaR2Dw9L._AC_SR405%2C405_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Art of Money Getting </h3>
+          <span>P T Barnum</span>
+          <div class="price">₹599</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+       <div class="book">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/71HX66uNvfL._AC_UL165_SR165,165_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Richest Man in Babylon</h3>
+          <span>George S. Clason</span>
+          <div class="price">₹599</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+       <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41mZlUMtDwL._SX342_SY445_FMwebp_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Before You Start Up Your Dream</h3>
+          <span>Pankaj Goyal </span>
+          <div class="price">₹599</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+       <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61PIpidSThL._AC_UL480_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Diary of CEO:The 33 Laws of Business and Life</h3>
+          <span> Steven BartlettL</span>
+          <div class="price">₹599</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/810u9MkT3SL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Hard Thing about Hard Thing Buisness </h3>
+          <span>Ben Horowitz </span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61zt25yYrCL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>DEEP WORK: RULES FOR FOCUSED SUCCESS IN A DISTRACTED WORLD</h3>
+          <span>Cal Newport</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/51cibmdlSHL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Think and Grow Rich by Napoleon Hill - Self-help Classic </h3>
+          <span>Napoleon Hill</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/71oCD+IDBkL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Countdown to Riches: 21 Days of Wealth-Attracting Habits</h3>
+          <span>Rhonda Byrne</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61xivWmExiL._AC_SR405%2C405_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>The Mountain Is You in Life</h3>
+          <span>Brianna Wiest</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81-QxsWwwmL._AC_SR405%2C405_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>7 Habits Of Highly Effective Teenagers</h3>
+          <span>SEAN COVEY</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61pxGP2E0gL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>World's Greatest Artists </h3>
+          <span>Wonder House Books</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/71bpaJVjPRL._AC_UY327_FMwebp_QL65_.jpg" alt="Book">
+        <div class="book-content">
+          <h3>Ghost Hunter Gaurav</h3>
+          <span>Abhirup Dhar and Indian Paranormal Society</span>
+          <div class="price">₹349</div>
+          <button>Add to Cart</button>
+        </div>
+      </div> 
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h4>🚚 Fast Delivery</h4>
+        <p>Get your books delivered quickly and safely.</p>
+      </div>
+
+      <div class="feature">
+        <h4>💳 Secure Payments</h4>
+        <p>100% secure and trusted payment methods.</p>
+      </div>
+
+      <div class="feature">
+        <h4>📚 Quality Collection</h4>
+        <p>Carefully curated books for every reader.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 BookWallah | Designed to Inspire Readers | Designed By Shashwat Shukla</p>
+  </footer>
+
+</body>
+</html>
